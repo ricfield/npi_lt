@@ -11,7 +11,7 @@ def main():
       last_name = input("Enter Last Name (Press enter for none): ")
       first_name = input("Enter First Name  (Press enter for none): ")
 
-      pv information_json = getNPIInformationJSON(postal_code, last_name, first_name)
+      pv_information_json = getNPIInformationJSON(postal_code, last_name, first_name)
       
       print("\n\nResults:\n")
 
