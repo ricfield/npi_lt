@@ -17,19 +17,17 @@ def main():
 
       print("NPI          Last Name                      First Name                   ")
       print("-------------------------------------------------------------------------")
-      
-      
+         
       for pv in pv_information_json['results']:
          print('{:10}'.format(str(pv['number'])) + "   " + '{:31}'.format(pv['basic']['last_name']) + '{:30}'.format(pv['basic']['first_name']))
 
       print("\n")
 
 def getNPIInformationJSON(ZIP, lastName, firstName):
-   nppes_url = urllib.request.urlopen("https://npiregistry.cms.hhs.gov/api/?limit=200&number=&enumeration_type=1&taxonomy_description=&last_name=" + last_name + "&firstname=" + first_name + "&postal_code=" + postal_code)
+   nppes_url = urllib.request.urlopen("https://npiregistry.cms.hhs.gov/api/?limit=200&number=&enumeration_type=1&taxonomy_description=&last_name=" + lastName + "&firstname=" + firstName + "&postal_code=" + ZIP)
    providerJSONData = json.loads(nppes_url.read())
    return providerJSONData
    
    
 if __name__ == '__main__':
    main()
-   
