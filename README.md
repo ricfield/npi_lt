@@ -8,3 +8,4 @@ fast interface to lookup the most to date provider information.
 This python script takes no command line arguments and continuously runs
 until it is stopped with CTRL-C.
 
+This tool can be freely distributed and modified as necessary.
